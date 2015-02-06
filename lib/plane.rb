@@ -15,4 +15,9 @@ class Plane
 		self
 	end
 
+	def land!
+		@flying = false
+		self
+	end
+
 end
