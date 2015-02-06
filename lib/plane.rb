@@ -3,14 +3,14 @@ class Plane
 	attr_accessor :flying
 
 	def initialize
-		fly!
+		in_the_air
 	end
 		
 	def flying?
 		@flying
 	end
 
-	def fly!
+	def in_the_air
 		@flying = true
 		self
 	end
@@ -21,7 +21,7 @@ class Plane
 	end
 
 	def takeoff!
-		fly!
+		in_the_air	
 	end
 
 end
