@@ -20,4 +20,8 @@ class Plane
 		self
 	end
 
+	def takeoff!
+		fly!
+	end
+
 end

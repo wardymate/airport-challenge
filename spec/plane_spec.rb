@@ -12,9 +12,16 @@ describe Plane do
 		expect(plane.fly!).to be_flying
 	end
 
-	it ' does not have a flying status when it lands' do
-	expect(plane.land!).not_to be_flying
-end
+	it 'does not have a flying status when it lands' do
+		expect(plane.land!).not_to be_flying
+	end
+
+	it 'can take off' do
+		plane.land!
+		plane.takeoff!
+		expect(plane).to be_flying
+
+	end
 	
 
 
