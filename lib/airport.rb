@@ -1,8 +1,31 @@
 class Airport
-	def plane_can_land(plane)
+	
+	attr_reader :capacity
+	attr_accessor :planes
+
+	def initialize
+		@capacity = 20
+		@planes = []
+	end
+
+	def plane_can_land?
 		true
 	end
-	def plane_can_take_off(plane)
+
+	def land_plane(plane)
+		@planes << plane
+	end
+
+	def plane_count
+		@planes.count
+	end
+	
+	def plane_can_take_off?
 		true
 	end
+
+	def full?
+	end
+
+
 end
