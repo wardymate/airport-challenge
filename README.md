@@ -11,6 +11,7 @@ How to use
 to be confirmed at this stage
 
 ```
+----------
 
-Definitions of Difeerent Class
+Definitions of Different Class
 ----------
