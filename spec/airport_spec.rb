@@ -11,15 +11,18 @@ describe Airport do
 		end
 
 		it 'accepts the plane that is landing' do
-			expect(airport.plane_count).to eq(0)
 			airport.land_plane(plane)
 			expect(airport.plane_count).to eq(1)
-
 		end
 
-
-	 	it 'a plane can take off' do
+		it 'a plane can take off' do
 			expect(airport.plane_can_take_off?).to eq true
+		end
+
+		it 'release a plane when it takes off' do
+			airport.land_plane(plane)
+			airport.release_plane(plane)
+			expect(airport.plane_count).to eq(0)
 		end
 
 	end

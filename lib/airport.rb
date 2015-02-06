@@ -24,6 +24,10 @@ class Airport
 		true
 	end
 
+	def release_plane(plane)
+		@planes.delete(plane)
+	end
+
 	def full?
 	end
 
