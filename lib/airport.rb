@@ -1,5 +1,9 @@
+require'weather'
+
 class Airport
 	
+	include Weather
+
 	attr_reader :capacity
 	attr_accessor :planes
 

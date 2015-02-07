@@ -1,36 +1,50 @@
 require 'airport'
 
 describe Airport do 
-	let(:airport) {Airport.new}
+	let(:gatwick) {Airport.new}
 	let(:plane)	{double :plane}
 
 	context 'taking off and landing' do
 		
 		it 'a plane can land' do
-			expect(airport.plane_can_land?).to eq true
+			expect(gatwick.plane_can_land?).to eq true
 		end
 
 		it 'accepts the plane that is landing' do
-			airport.land_plane(plane)
-			expect(airport.plane_count).to eq(1)
+			gatwick.land_plane(plane)
+			expect(gatwick.plane_count).to eq(1)
 		end
 
 		it 'a plane can take off' do
-			expect(airport.plane_can_take_off?).to eq true
+			expect(gatwick.plane_can_take_off?).to eq true
 		end
 
 		it 'release a plane when it takes off' do
-			airport.land_plane(plane)
-			airport.release_plane(plane)
-			expect(airport.plane_count).to eq(0)
+			gatwick.land_plane(plane)
+			gatwick.release_plane(plane)
+			expect(gatwick.plane_count).to eq(0)
 		end
 
 	end
 
+		context 'weather' do
+
+			it 'should be able to be sunny' do
+				gatwick.sunny!
+				expect(gatwick).to be_sunny
+			end
+
+			it 'should be not be sunny' do
+				gatwick.stormy!
+				expect(gatwick).not_to be_sunny
+			end
+
+		end
+
 		context ' traffic control' do
 
 			it 'should know its capacity' do
-				expect(airport.capacity).to eq(20)
+				expect(gatwick.capacity).to eq(20)
 			end
 		
 			# it 'should know if it is full' do

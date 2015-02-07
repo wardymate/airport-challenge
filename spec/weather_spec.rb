@@ -1,14 +1,24 @@
-require 'weather'
+# require 'weather'
 
-class WeatherAirport; include Weather; end
+# class WeatherAirport; include Weather; end
 
-describe Weather do 
+# describe Weather do 
 	
-	let(:weather) {WeatherAirport.new}
+# 	let(:gatwick) {WeatherAirport.new}
 
-	it 'should know if it is sunny' do
-		expect(weather).to be_sunny
-	end
+# 	it 'should start sunny' do
+# 		expect(gatwick).to be_sunny
 
+# 	end
+
+# 	it 'should know if it is not sunny' do
+# 		gatwick.stormy!
+# 		expect(gatwick).to_not be_sunny
+# 	end
+
+# 		it 'should make itself again' do
+# 			gatwick.stormy!
+# 		expect(gatwick.sunny!).to be_sunny
+# 	end
 	
-end
+# end
