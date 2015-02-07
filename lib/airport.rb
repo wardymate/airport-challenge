@@ -13,7 +13,7 @@ class Airport
 	end
 
 	def plane_can_land?
-		true
+		plane_count < capacity
 	end
 
 	def land_plane(plane)

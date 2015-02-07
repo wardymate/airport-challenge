@@ -53,10 +53,10 @@ describe Airport do
 				expect(gatwick).to be_full
 			end
 
-			# it 'a plane cannot land if the airport is full' do
-			# 	airport.full?		
-				
-			# end
+			it 'a plane cannot land if the airport is full' do
+				gatwick.capacity.times{gatwick.land_plane(plane)}
+				expect(gatwick.plane_can_land?).to eq false
+			end
 
 		end
 
