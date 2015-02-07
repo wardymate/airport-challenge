@@ -34,7 +34,7 @@ describe Airport do
 				expect(gatwick).to be_sunny
 			end
 
-			it 'should be not be sunny' do
+			it 'should be able to be stormy' do
 				gatwick.stormy!
 				expect(gatwick).not_to be_sunny
 			end
@@ -47,10 +47,11 @@ describe Airport do
 				expect(gatwick.capacity).to eq(20)
 			end
 		
-			# it 'should know if it is full' do
-			# 	expect(airport).not_to be_full
-			# 	airport.capacity.times {airport.plane}
-			# end
+			it 'should know if it is full' do
+			 	expect(gatwick).not_to be_full
+				gatwick.capacity.times{gatwick.land_plane(plane)}
+				expect(gatwick).to be_full
+			end
 
 			# it 'a plane cannot land if the airport is full' do
 			# 	airport.full?		
