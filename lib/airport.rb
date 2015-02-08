@@ -25,11 +25,7 @@ class Airport
 	end
 	
 	def plane_can_take_off?
-		if sunny?
-			true
-		else
-			false
-		end
+		sunny? ? true : false
 	end
 
 	def release_plane(plane)
