@@ -1,4 +1,4 @@
-require'weather'
+require_relative 'weather'
 
 class Airport
 	
@@ -25,7 +25,11 @@ class Airport
 	end
 	
 	def plane_can_take_off?
-		true
+		if sunny?
+			true
+		else
+			false
+		end
 	end
 
 	def release_plane(plane)

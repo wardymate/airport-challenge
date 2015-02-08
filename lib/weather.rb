@@ -14,9 +14,14 @@ module Weather
 		@sunny = false
 	end
 
-	def random_weather
-		r = rand(1..100)
-		r > 95 ? stormy! : sunny!
+	def random_weather(number)
+		number > 95 ? stormy! : sunny!
 	end
+
+	def random_number
+		rand(1..100)
+	end
+
+
 
 end
