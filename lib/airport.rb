@@ -22,6 +22,7 @@ class Airport
 
 	def land_plane(plane)
 		if plane_can_land?
+			plane.land!
 			@planes << plane
 		end
 	end

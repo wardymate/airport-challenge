@@ -2,7 +2,7 @@ require 'airport'
 
 describe Airport do 
 	let(:gatwick) {Airport.new}
-	let(:plane)	{double :plane}
+	let(:plane)	{double :plane, land!: false}
 
 	context 'taking off and landing' do
 		
