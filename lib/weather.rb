@@ -14,4 +14,13 @@ module Weather
 		@sunny = false
 	end
 
+	def random_weather
+		r = rand(1..100)
+		if r > 95
+			stormy!
+		else
+			sunny!
+		end
+	end
+
 end

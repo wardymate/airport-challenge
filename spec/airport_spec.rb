@@ -39,6 +39,12 @@ describe Airport do
 				expect(gatwick).not_to be_sunny
 			end
 
+			it 'should be randomly stormy' do
+				weather_array = []
+				100.times{ weather_array << gatwick.random_weather}
+				expect(weather_array).to include true, false
+			end
+
 		end
 
 		context ' traffic control' do
@@ -57,8 +63,19 @@ describe Airport do
 				gatwick.capacity.times{gatwick.land_plane(plane)}
 				expect(gatwick.plane_can_land?).to eq false
 			end
+			context 'weather conditions' do
+	      it 'a plane cannot take off when there is a storm brewing' do
+	      
+
+	      end
+	      
+	      it 'a plane cannot land in the middle of a storm' do
+	      end
+    	end
 
 		end
+
+
 
 
 
