@@ -13,7 +13,11 @@ class Airport
 	end
 
 	def plane_can_land?
-		plane_count < capacity
+		if sunny? && plane_count < capacity
+			true
+		else
+			false
+		end
 	end
 
 	def land_plane(plane)
