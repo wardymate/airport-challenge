@@ -8,7 +8,7 @@ class Airport
 	attr_accessor :planes
 
 	def initialize
-		@capacity = 20
+		@capacity = 6
 		@planes = []
 	end
 
@@ -21,7 +21,9 @@ class Airport
 	end
 
 	def land_plane(plane)
-		@planes << plane
+		if plane_can_land?
+			@planes << plane
+		end
 	end
 
 	def plane_count
@@ -33,7 +35,9 @@ class Airport
 	end
 
 	def release_plane(plane)
-		@planes.delete(plane)
+		if plane_can_take_off?
+			@planes.delete(plane)
+		end
 	end
 
 	def full?

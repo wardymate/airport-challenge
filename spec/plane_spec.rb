@@ -25,8 +25,5 @@ describe Plane do
 	it 'changes its status to flying after taking off' do
 		expect(plane.takeoff!.flying?).not_to eq(plane.land!.flying?)
 	end
-	
-
-
 
 end

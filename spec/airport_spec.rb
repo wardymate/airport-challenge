@@ -12,6 +12,7 @@ describe Airport do
 		end
 
 		it 'accepts the plane that is landing' do
+			gatwick.sunny!
 			gatwick.land_plane(plane)
 			expect(gatwick.plane_count).to eq(1)
 		end
@@ -52,11 +53,12 @@ describe Airport do
 	context 'traffic control' do
 
 		it 'should know its capacity' do
-			expect(gatwick.capacity).to eq(20)
+			expect(gatwick.capacity).to eq(6)
 		end
 	
 		it 'should know if it is full' do
 		 	expect(gatwick).not_to be_full
+		 	gatwick.sunny!
 			gatwick.capacity.times{gatwick.land_plane(plane)}
 			expect(gatwick).to be_full
 		end
