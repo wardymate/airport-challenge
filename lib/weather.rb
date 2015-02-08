@@ -16,11 +16,7 @@ module Weather
 
 	def random_weather
 		r = rand(1..100)
-		if r > 95
-			stormy!
-		else
-			sunny!
-		end
+		r > 95 ? stormy! : sunny!
 	end
 
 end
