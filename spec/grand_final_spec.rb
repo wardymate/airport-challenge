@@ -3,12 +3,8 @@ require 'airport'
 
 describe "The grand finale (last spec)" do
 
-	let(:spitfire)	{Plane.new}
-	let(:hurricane)	{Plane.new}
-	let(:lancaster)	{Plane.new}
-	let(:mosquito)	{Plane.new}
-	let(:typhoon)	{Plane.new}
-	let(:swordfish)	{Plane.new}
+	planes = [:spitfire, :hurricane, :lancaster, :mosquito, :typhoon, :swordfish]
+	planes.each {|plane| let(plane) {Plane.new}}
 	let(:gatwick) {Airport.new}
 
 	def land_six_planes
