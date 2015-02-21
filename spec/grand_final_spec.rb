@@ -7,8 +7,9 @@ describe "The grand finale (last spec)" do
 	planes.each {|plane| let(plane) {Plane.new}}
 	let(:gatwick) {Airport.new}
 
+
 	def land_six_planes
-		gatwick.sunny!
+		gatwick.sunny!`
   	gatwick.land_plane(spitfire)
   	gatwick.land_plane(hurricane)
   	gatwick.land_plane(lancaster)
