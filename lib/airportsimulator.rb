@@ -1,7 +1,6 @@
-
+# Airport Simulator
 class AirportSimulator
-
-	def create_plane
-		Plane.new
-	end
+  def create_plane
+    Plane.new
+  end
 end

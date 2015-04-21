@@ -1,27 +1,26 @@
+# Plane Class
 class Plane
-	
-	attr_accessor :flying
+  attr_accessor :flying
 
-	def initialize
-		in_the_air
-	end
-		
-	def flying?
-		@flying
-	end
+  def initialize
+    in_the_air
+  end
 
-	def in_the_air
-		@flying = true
-		self
-	end
+  def flying?
+    @flying
+  end
 
-	def land!
-		@flying = false
-		self
-	end
+  def in_the_air
+    @flying = true
+    self
+  end
 
-	def takeoff!
-		in_the_air	
-	end
+  def land!
+    @flying = false
+    self
+  end
 
+  def takeoff!
+    in_the_air
+  end
 end
