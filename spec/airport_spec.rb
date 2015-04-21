@@ -4,6 +4,10 @@ describe Airport do
   let(:gatwick) { Airport.new }
   let(:plane) { double :plane, land!: false }
 
+  def weather
+    gatwick.random_weather(gatwick.random_number)
+  end
+
   context 'taking off and landing' do
     it 'a plane can land' do
       gatwick.sunny!
@@ -41,7 +45,7 @@ describe Airport do
 
     it 'should be randomly stormy' do
       weather_array = []
-      100.times  { weather_array << gatwick.random_weather(gatwick.random_number) }
+      100.times  { weather_array << weather }
       expect(weather_array).to include true, false
     end
   end
